@@ -534,7 +534,7 @@ function DikoSection() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_3135_163)">
+              <g clipPath="url(#clip0_3135_163)">
                 <g opacity="0.2">
                   <path
                     d="M50 106C53.3137 106 56 103.314 56 100C56 96.6863 53.3137 94 50 94C46.6863 94 44 96.6863 44 100C44 103.314 46.6863 106 50 106Z"
