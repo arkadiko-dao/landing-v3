@@ -8,22 +8,26 @@ import {
 import { Bars2Icon } from "@heroicons/react/24/solid";
 import { Link } from "./link";
 import Logo from "./logo";
+import External from "./external";
 
 const links = [
-  { href: "/docs", label: "Docs" },
+  { href: "https://docs.arkadiko.finance/", label: "Docs", external: true },
   { href: "#faq", label: "FAQ" },
 ];
 
 function DesktopNav() {
   return (
     <nav className="relative hidden lg:flex rounded-2xl overflow-hidden">
-      {links.map(({ href, label }) => (
+      {links.map(({ href, label, external }) => (
         <div key={href} className="relative flex">
           <Link
             href={href}
             className="flex items-center px-6 py-3 text-lg font-medium text-gray-950 bg-blend-multiply transition duration-700 ease-in-out bg-white/30 data-[hover]:bg-black/[5%]"
           >
             {label}
+            {external ? (
+              <External className="w-4 h-auto ml-2.5 mt-1 text-gray-950 opacity-80" />
+            ) : null}
           </Link>
         </div>
       ))}

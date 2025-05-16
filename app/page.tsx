@@ -15,6 +15,7 @@ import type { Metadata } from "next";
 import { Pile } from "@/components/pile";
 import { Footer } from "@/components/footer";
 import { GiftIcon, ScaleIcon } from "@heroicons/react/24/solid";
+import External from "@/components/external";
 
 export const metadata: Metadata = {
   description:
@@ -76,7 +77,7 @@ const faqs = [
 function Hero() {
   return (
     <div className="relative overflow-hidden">
-      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-2 ring-inset ring-white/20" />
+      <Gradient className="absolute inset-0" />
       <Dots className="absolute blur-[4px] opacity-10 -right-[200px]" />
 
       <Container className="relative">
@@ -255,7 +256,7 @@ function UsdaSection() {
           <div>
             <Heading
               as="h2"
-              className="max-w-3xl font-[family-name:var(--font-geist-mono)]"
+              className="max-w-3xl font-[family-name:var(--font-geist-mono)] !font-extrabold"
             >
               <span className="text-8xl">USDA</span>
               <br />
@@ -396,13 +397,16 @@ function UsdaSection() {
         <div className="mt-20">
           <Heading
             as="h2"
-            className="max-w-3xl font-[family-name:var(--font-geist-mono)]"
+            className="max-w-3xl font-[family-name:var(--font-geist-mono)] !font-extrabold"
           >
             USDA Use Cases in DeFi
           </Heading>
 
           <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-2 lg:grid-rows-2">
-            <div className="ring-1 ring-inset bg-gradient-to-br from-gray-100/70 to-gray-200/80 ring-black/[0.16] rounded-xl lg:rounded-tl-4xl shadow">
+            <a
+              href="https://www.zestprotocol.com/"
+              className="ring-1 ring-inset bg-gradient-to-br from-gray-100/70 to-gray-200/80 ring-black/[0.16] rounded-xl lg:rounded-tl-4xl shadow hover:bg-gradient-to-tr hover:scale-[1.015] transition ease-in"
+            >
               <div className="py-12 px-10 text-slate-800 text-2xl">
                 <div className="flex items-center gap-x-2">
                   <svg
@@ -421,17 +425,24 @@ function UsdaSection() {
                     />
                   </svg>
 
-                  <h4 className="text-xl font-[family-name:var(--font-geist-mono)] font-semibold">
-                    Zest Protocol
-                  </h4>
+                  <div className="flex items-center">
+                    <h4 className="text-xl font-[family-name:var(--font-geist-mono)] font-semibold">
+                      Zest Protocol
+                    </h4>
+
+                    <External className="w-4 h-auto ml-2.5 mt-1 text-gray-950 opacity-80" />
+                  </div>
                 </div>
                 <p className="mt-4 text-lg text-gray-950/75">
                   Participate in lending and borrowing pools with a stable,
                   dollar-pegged asset.
                 </p>
               </div>
-            </div>
-            <div className="ring-1 ring-inset bg-gradient-to-bl from-gray-100/70 to-gray-200/80 ring-black/[0.16] rounded-xl lg:rounded-tr-4xl shadow">
+            </a>
+            <a
+              href="https://www.bitflow.finance/"
+              className="ring-1 ring-inset bg-gradient-to-br from-gray-100/70 to-gray-200/80 ring-black/[0.16] rounded-xl shadow hover:bg-gradient-to-tr hover:scale-[1.015] transition ease-in lg:rounded-tr-4xl"
+            >
               <div className="py-12 px-10 text-slate-800 text-2xl">
                 <div className="flex items-center gap-x-2">
                   <svg
@@ -446,17 +457,23 @@ function UsdaSection() {
                     />
                   </svg>
 
-                  <h4 className="text-xl font-[family-name:var(--font-geist-mono)] font-semibold">
-                    Bitflow
-                  </h4>
+                  <div className="flex items-center">
+                    <h4 className="text-xl font-[family-name:var(--font-geist-mono)] font-semibold">
+                      Bitflow
+                    </h4>
+                    <External className="w-4 h-auto ml-2.5 mt-1 text-gray-950 opacity-80" />
+                  </div>
                 </div>
                 <p className="mt-4 text-lg text-gray-950/75">
                   Act as a stable bridge for cross-chain transfers, enabling
                   seamless and predictable value movement across ecosystems.
                 </p>
               </div>
-            </div>
-            <div className="ring-1 ring-inset bg-gradient-to-tr from-gray-100/70 to-gray-200/80 ring-black/[0.16] rounded-xl lg:rounded-bl-4xl shadow">
+            </a>
+            <a
+              href="https://alexlab.co/"
+              className="ring-1 ring-inset bg-gradient-to-tr from-gray-100/70 to-gray-200/80 ring-black/[0.16] rounded-xl lg:rounded-bl-4xl shadow hover:bg-gradient-to-tr hover:scale-[1.015] transition ease-in"
+            >
               <div className="py-12 px-10 text-slate-800 text-2xl">
                 <div className="flex items-center gap-x-2">
                   <svg
@@ -473,17 +490,23 @@ function UsdaSection() {
                     />
                   </svg>
 
-                  <h4 className="text-xl font-[family-name:var(--font-geist-mono)] font-semibold">
-                    ALEX
-                  </h4>
+                  <div className="flex items-center">
+                    <h4 className="text-xl font-[family-name:var(--font-geist-mono)] font-semibold">
+                      ALEX
+                    </h4>
+                    <External className="w-4 h-auto ml-2.5 mt-1 text-gray-950 opacity-80" />
+                  </div>
                 </div>
                 <p className="mt-4 text-lg text-gray-950/75">
                   Enable stable swaps, liquidity provision, and yield farming,
                   driving predictable returns in the ecosystem.
                 </p>
               </div>
-            </div>
-            <div className="ring-1 ring-inset bg-gradient-to-tl from-gray-100/70 to-gray-200/80 ring-black/[0.16] rounded-xl lg:rounded-br-4xl shadow">
+            </a>
+            <a
+              href="https://app.arkadiko.finance/"
+              className="ring-1 ring-inset bg-gradient-to-tl from-gray-100/70 to-gray-200/80 ring-black/[0.16] rounded-xl lg:rounded-br-4xl shadow hover:bg-gradient-to-tr hover:scale-[1.015] transition ease-in"
+            >
               <div className="py-12 px-10 text-slate-800 text-2xl">
                 <div className="flex items-center gap-x-2">
                   <svg
@@ -502,17 +525,19 @@ function UsdaSection() {
                     />
                     <defs></defs>
                   </svg>
-
-                  <h4 className="text-xl font-[family-name:var(--font-geist-mono)] font-semibold">
-                    Arkadiko
-                  </h4>
+                  <div className="flex items-center">
+                    <h4 className="text-xl font-[family-name:var(--font-geist-mono)] font-semibold">
+                      Arkadiko
+                    </h4>
+                    <External className="w-4 h-auto ml-2.5 mt-1 text-gray-950 opacity-80" />
+                  </div>
                 </div>
                 <p className="mt-4 text-lg text-gray-950/75">
                   USDA powers Arkadiko&apos;s ecosystem by enabling minting,
                   staking, and earning opportunities.
                 </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </Container>
@@ -591,7 +616,7 @@ function DikoSection() {
               </defs>
             </svg>
 
-            <div className="text-center relative">
+            <div className="text-center relative z-[1]">
               <svg
                 className="w-20 h-20 mx-auto mb-4"
                 viewBox="0 0 64 64"
@@ -617,7 +642,7 @@ function DikoSection() {
               >
                 Meet
                 <br />
-                <span className="text-8xl">DIKO</span>
+                <span className="text-8xl font-semibold">DIKO</span>
               </Heading>
 
               <p className="mt-8 max-w-2xl mx-auto text-xl/7 font-medium text-violet-950/80 sm:text-2xl/8">
@@ -629,7 +654,7 @@ function DikoSection() {
               </p>
             </div>
 
-            <div className="mt-8 py-8 divide-y divide-white/10">
+            <div className="relative mt-8 py-8 divide-y divide-white/10 z-[1]">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8">
                 <div className="rounded-lg bg-[#6366F1]/20 border border-[#6366F1]/10 p-6">
                   <div className="bg-violet-950 rounded-xl w-12 h-12 flex items-center justify-center">
@@ -658,7 +683,7 @@ function DikoSection() {
               </div>
             </div>
 
-            <div className="relative text-center mt-6">
+            <div className="relative text-center mt-6 z-[1]">
               <p className="mx-auto max-w-lg text-xl font-semibold text-violet-950/70">
                 Be part of DeFi on Bitcoin—earn, stake, and vote with DIKO.
               </p>
@@ -3192,7 +3217,7 @@ function SecurityAudits() {
 
 function Faq() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden" id="faq">
       <div className="relative bg-white/5">
         <div className="absolute inset-[35%] block rounded-full bg-white/10 blur-2xl" />
         <div className="absolute inset-[15%] block rounded-full bg-white/[0.01] blur-2xl" />
@@ -3226,7 +3251,7 @@ function Faq() {
             </div>
 
             <div className="flex items-center justify-end relative w-full">
-              <dl className="max-w-2xl border rounded-xl border-gray-700 mt-8 space-y-6 divide-y divide-gray-700 backdrop-blur-lg">
+              <dl className="w-full sm:w-[600px] border rounded-xl border-gray-700 mt-8 space-y-6 divide-y divide-gray-700 backdrop-blur-lg">
                 <div className="mx-auto w-full p-8 divide-y divide-white/5 rounded-xl bg-white/5">
                   {faqs.map((faq) => (
                     <Disclosure
