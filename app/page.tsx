@@ -16,6 +16,7 @@ import type { Metadata } from "next";
 import { Pile } from "@/components/pile";
 import { Footer } from "@/components/footer";
 import { GiftIcon, ScaleIcon } from "@heroicons/react/24/solid";
+import External from "@/components/external";
 
 export const metadata: Metadata = {
   description:
@@ -100,7 +101,11 @@ function Hero() {
               </Button>
               <p className="text-xs text-center mt-1 text-gray-950/75">
                 By launching the app, you{" "}
-                <a className="underline" href="/arkadiko-EULA.pdf" target="_blank">
+                <a
+                  className="underline"
+                  href="/arkadiko-EULA.pdf"
+                  target="_blank"
+                >
                   agree to the EULA
                 </a>
               </p>
