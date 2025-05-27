@@ -444,8 +444,7 @@ function ProductSuiteSection() {
             </div>
             <div className="text-center mx-auto mt-6 sm:mt-0">
               <svg
-                width="339"
-                height="368"
+                className="w-[300px] sm:w-[339px] h-auto"
                 viewBox="0 0 339 368"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -910,8 +909,7 @@ function ProductSuiteSection() {
             </div>
             <div className="text-center mx-auto mt-6 sm:mt-0">
               <svg
-                width="339"
-                height="269"
+                className="w-[300px] sm:w-[339px] h-auto"
                 viewBox="0 0 339 269"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1349,8 +1347,7 @@ function ProductSuiteSection() {
             </div>
             <div className="text-center mx-auto mt-6 sm:mt-0">
               <svg
-                width="339"
-                height="261"
+                className="w-[300px] sm:w-[339px] h-auto"
                 viewBox="0 0 339 261"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1587,8 +1584,7 @@ function ProductSuiteSection() {
             </div>
             <div className="text-center mx-auto mt-6 sm:mt-0">
               <svg
-                width="339"
-                height="303"
+                className="w-[300px] sm:w-[339px] h-auto"
                 viewBox="0 0 339 303"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1936,8 +1932,7 @@ function ProductSuiteSection() {
             </div>
             <div className="text-center mx-auto mt-6 sm:mt-0">
               <svg
-                width="339"
-                height="208"
+                className="w-[300px] sm:w-[339px] h-auto"
                 viewBox="0 0 339 208"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2177,8 +2172,7 @@ function ProductSuiteSection() {
             </div>
             <div className="text-center mx-auto mt-6 sm:mt-0">
               <svg
-                width="339"
-                height="270"
+                className="w-[300px] sm:w-[339px] h-auto"
                 viewBox="0 0 339 270"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2971,7 +2965,7 @@ function Faq() {
                         <span className="text-left text-lg font-medium text-white group-data-[hover]:text-white/80">
                           {faq.question}
                         </span>
-                        <ChevronDownIcon className="size-5 fill-white/60 group-data-[hover]:fill-white/50 group-data-[open]:rotate-180" />
+                        <ChevronDownIcon className="shrink-0 size-5 fill-white/60 group-data-[hover]:fill-white/50 group-data-[open]:rotate-180" />
                       </DisclosureButton>
                       <DisclosurePanel className="mt-2 text-base text-white/50">
                         <p dangerouslySetInnerHTML={{ __html: faq.answer }} />

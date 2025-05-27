@@ -146,7 +146,7 @@ export function UsdaSection() {
 
         <div className="flex flex-col lg:flex-row lg:items-center w-full gap-y-4 md:gap-y-8 lg:gap-x-16 mt-10">
           <div className="w-full sm:max-w-1/4 order-2 lg:order-1">
-            <div className="rounded-3xl bg-gradient-to-tr from-violet-950/90 to-violet-800/90 text-white py-8 px-12 ring-1 ring-violet-950/[0.08] ring-inset backdrop-blur hover:ring-violet-950/[0.13]">
+            <div className="rounded-3xl bg-gradient-to-tr from-violet-950/90 to-violet-800/90 text-white py-8 px-8 sm:px-12 ring-1 ring-violet-950/[0.08] ring-inset backdrop-blur hover:ring-violet-950/[0.13]">
               <p className="text-lg text-white/80 tracking-widest font-[family-name:var(--font-geist-mono)] mb-2">
                 TVL
               </p>
@@ -160,7 +160,7 @@ export function UsdaSection() {
             </div>
           </div>
           <div className="w-full sm:max-w-1/4 order-1 lg:order-2">
-            <div className="rounded-3xl bg-gradient-to-tr from-violet-950 to-violet-800 text-white py-8 px-12 ring-1 ring-violet-950/[0.08] ring-inset backdrop-blur hover:ring-violet-950/[0.13]">
+            <div className="rounded-3xl bg-gradient-to-tr from-violet-950 to-violet-800 text-white py-8 px-8 sm:px-12 ring-1 ring-violet-950/[0.08] ring-inset backdrop-blur hover:ring-violet-950/[0.13]">
               <p className="text-2xl text-white/80 tracking-widest font-[family-name:var(--font-geist-mono)] mb-4">
                 Circulating USDA
               </p>
@@ -174,7 +174,7 @@ export function UsdaSection() {
             </div>
           </div>
           <div className="w-full sm:max-w-1/4 order-3 lg:order-3">
-            <div className="rounded-3xl bg-gradient-to-tr from-violet-950/90 to-violet-800/90 text-white py-8 px-12 ring-1 ring-violet-950/[0.08] ring-inset backdrop-blur hover:ring-violet-950/[0.13]">
+            <div className="rounded-3xl bg-gradient-to-tr from-violet-950/90 to-violet-800/90 text-white py-8 px-8 sm:px-12 ring-1 ring-violet-950/[0.08] ring-inset backdrop-blur hover:ring-violet-950/[0.13]">
               <p className="text-lg text-white/80 tracking-widest font-[family-name:var(--font-geist-mono)] mb-2">
                 Holders
               </p>
