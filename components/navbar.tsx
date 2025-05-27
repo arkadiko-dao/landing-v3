@@ -50,13 +50,16 @@ function MobileNav() {
   return (
     <DisclosurePanel className="lg:hidden mt-6 bg-black/80 rounded-3xl p-6">
       <div className="flex flex-col gap-6 py-4">
-        {links.map(({ href, label }) => (
+        {links.map(({ href, label, external }) => (
           <div key={href}>
             <Link
               href={href}
-              className="text-base font-medium text-white/80 hover:text-white"
+              className="flex items-center text-base font-medium text-white/80 hover:text-white"
             >
               {label}
+              {external ? (
+                <External className="w-4 h-auto ml-2.5 mt-1 text-white opacity-80" />
+              ) : null}
             </Link>
           </div>
         ))}

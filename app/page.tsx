@@ -16,7 +16,6 @@ import type { Metadata } from "next";
 import { Pile } from "@/components/pile";
 import { Footer } from "@/components/footer";
 import { GiftIcon, ScaleIcon } from "@heroicons/react/24/solid";
-import External from "@/components/external";
 
 export const metadata: Metadata = {
   description:
@@ -85,7 +84,7 @@ function Hero() {
         <Navbar />
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-32 md:pt-32 relative lg:flex lg:justify-between lg:items-start lg:gap-x-10">
           <div className="max-w-2xl">
-            <h1 className="font-display text-balance text-6xl/[0.9] font-medium tracking-tight text-gray-950 sm:text-7xl/[0.8] md:text-7xl/[0.8] font-[family-name:var(--font-geist-mono)]">
+            <h1 className="font-display text-balance text-5xl/[0.9] font-medium tracking-tight text-gray-950 sm:text-7xl/[0.8] md:text-7xl/[0.8] font-[family-name:var(--font-geist-mono)]">
               Bitcoin-backed Stablecoin
             </h1>
             <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
@@ -256,9 +255,9 @@ function Hero() {
 function DikoSection() {
   return (
     <div className="bg-gradient-to-b from-white via-violet-100 to-white overflow-hidden">
-      <div className="py-32">
+      <div className="py-16 sm:py-32">
         <Container>
-          <div className="w-full border border-violet-800/30 rounded-xl bg-violet-100 p-16 relative">
+          <div className="w-full border border-violet-800/30 rounded-xl bg-violet-100 p-8 sm:p-16 relative">
             <svg
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
               width="500"
@@ -350,7 +349,7 @@ function DikoSection() {
               >
                 Meet
                 <br />
-                <span className="text-8xl font-semibold">DIKO</span>
+                <span className="text-6xl sm:text-8xl font-semibold">DIKO</span>
               </Heading>
 
               <p className="mt-8 max-w-2xl mx-auto text-xl/7 font-medium text-violet-950/80 sm:text-2xl/8">
@@ -363,7 +362,7 @@ function DikoSection() {
             </div>
 
             <div className="relative mt-8 py-8 divide-y divide-white/10 z-[1]">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-8 sm:gap-y-8">
                 <div className="rounded-lg bg-[#6366F1]/20 border border-[#6366F1]/10 p-6">
                   <div className="bg-violet-950 rounded-xl w-12 h-12 flex items-center justify-center">
                     <ScaleIcon className="w-6 h-6 text-violet-50" />
@@ -414,13 +413,13 @@ function DikoSection() {
 
 function ProductSuiteSection() {
   return (
-    <div className="overflow-hidden mx-2 mt-24 rounded-4xl bg-slate-950 py-32">
+    <div className="overflow-hidden mx-2 mt-24 rounded-4xl bg-slate-950 py-16 sm:py-32">
       <Container>
         <Heading
           as="h2"
           className="max-w-3xl text-white/90 font-[family-name:var(--font-geist-mono)]"
         >
-          <span className="text-8xl">Product</span>
+          <span className="text-6xl sm:text-8xl">Product</span>
           <br />
           Suite
         </Heading>
@@ -443,7 +442,7 @@ function ProductSuiteSection() {
                 or adjust their holdings flexibly.
               </p>
             </div>
-            <div className="text-center mx-auto">
+            <div className="text-center mx-auto mt-6 sm:mt-0">
               <svg
                 width="339"
                 height="368"
@@ -909,7 +908,7 @@ function ProductSuiteSection() {
                 stability and provides users with passive income opportunities.
               </p>
             </div>
-            <div className="text-center mx-auto">
+            <div className="text-center mx-auto mt-6 sm:mt-0">
               <svg
                 width="339"
                 height="269"
@@ -1348,7 +1347,7 @@ function ProductSuiteSection() {
                 ecosystem liquidity.
               </p>
             </div>
-            <div className="text-center mx-auto">
+            <div className="text-center mx-auto mt-6 sm:mt-0">
               <svg
                 width="339"
                 height="261"
@@ -1586,7 +1585,7 @@ function ProductSuiteSection() {
                 protocol&apos;s health and resilience.
               </p>
             </div>
-            <div className="text-center mx-auto">
+            <div className="text-center mx-auto mt-6 sm:mt-0">
               <svg
                 width="339"
                 height="303"
@@ -1935,7 +1934,7 @@ function ProductSuiteSection() {
                 stability.
               </p>
             </div>
-            <div className="text-center mx-auto">
+            <div className="text-center mx-auto mt-6 sm:mt-0">
               <svg
                 width="339"
                 height="208"
@@ -2176,7 +2175,7 @@ function ProductSuiteSection() {
                 decisions and track the health of the Arkadiko ecosystem.
               </p>
             </div>
-            <div className="text-center mx-auto">
+            <div className="text-center mx-auto mt-6 sm:mt-0">
               <svg
                 width="339"
                 height="270"
@@ -2490,9 +2489,9 @@ function SecurityAudits() {
           <div>
             <Heading
               as="h2"
-              className="max-w-3xl font-[family-name:var(--font-geist-mono)]"
+              className="mb-8 sm:mb-0 text-center sm:text-left max-w-3xl font-[family-name:var(--font-geist-mono)]"
             >
-              <span className="text-8xl">Security</span>
+              <span className="text-6xl sm:text-8xl">Security</span>
               <br />
               Audits
             </Heading>
@@ -2943,14 +2942,14 @@ function Faq() {
           </svg>
         </div>
 
-        <Container className="py-48 relative">
+        <Container className="py-24 sm:py-48 relative">
           <div className="lg:flex lg:gap-x-8">
             <div>
               <Heading
                 as="h2"
                 className="text-white max-w-3xl font-[family-name:var(--font-geist-mono)]"
               >
-                <span className="text-7xl">Frequently</span>
+                <span className="text-5xl sm:text-7xl">Frequently</span>
                 <br />
                 Asked
                 <br />
@@ -2969,7 +2968,7 @@ function Faq() {
                       className="py-6"
                     >
                       <DisclosureButton className="group flex w-full items-center justify-between gap-x-12">
-                        <span className="text-lg font-medium text-white group-data-[hover]:text-white/80">
+                        <span className="text-left text-lg font-medium text-white group-data-[hover]:text-white/80">
                           {faq.question}
                         </span>
                         <ChevronDownIcon className="size-5 fill-white/60 group-data-[hover]:fill-white/50 group-data-[open]:rotate-180" />

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import { Container } from "@/components/container";
 import { Heading } from "@/components/text";
 import External from "@/components/external";
@@ -11,13 +11,16 @@ export function UsdaSection() {
 
   useEffect(() => {
     async function getHolders() {
-      const res = await fetch('https://api.mainnet.hiro.so/extended/v1/tokens/ft/SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.usda-token::usda/holders', { method: 'GET' });
+      const res = await fetch(
+        "https://api.mainnet.hiro.so/extended/v1/tokens/ft/SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.usda-token::usda/holders",
+        { method: "GET" }
+      );
       const data = await res.json();
 
       console.log(data);
-      setSupply(data['total_supply'] / 1_000_000);
+      setSupply(data["total_supply"] / 1_000_000);
       setTvl(5389385); // TODO: make dynamic
-      setHolders(data['total']);
+      setHolders(data["total"]);
     }
 
     getHolders();
@@ -48,7 +51,7 @@ export function UsdaSection() {
 
           <div className="mx-auto">
             <svg
-              className="w-[500px]"
+              className="w-auto md:w-[500px]"
               viewBox="0 0 292 276"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -141,13 +144,19 @@ export function UsdaSection() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row lg:items-center w-full gap-y-8 lg:gap-x-16 mt-10">
+        <div className="flex flex-col lg:flex-row lg:items-center w-full gap-y-4 md:gap-y-8 lg:gap-x-16 mt-10">
           <div className="w-full sm:max-w-1/4 order-2 lg:order-1">
             <div className="rounded-3xl bg-gradient-to-tr from-violet-950/90 to-violet-800/90 text-white py-8 px-12 ring-1 ring-violet-950/[0.08] ring-inset backdrop-blur hover:ring-violet-950/[0.13]">
               <p className="text-lg text-white/80 tracking-widest font-[family-name:var(--font-geist-mono)] mb-2">
                 TVL
               </p>
-              <p className="text-3xl font-bold">${tvl.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
+              <p className="text-3xl font-bold">
+                $
+                {tvl.toLocaleString("en-US", {
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
+                })}
+              </p>
             </div>
           </div>
           <div className="w-full sm:max-w-1/4 order-1 lg:order-2">
@@ -155,7 +164,13 @@ export function UsdaSection() {
               <p className="text-2xl text-white/80 tracking-widest font-[family-name:var(--font-geist-mono)] mb-4">
                 Circulating USDA
               </p>
-              <p className="text-5xl font-bold">${supply.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
+              <p className="text-5xl font-bold">
+                $
+                {supply.toLocaleString("en-US", {
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
+                })}
+              </p>
             </div>
           </div>
           <div className="w-full sm:max-w-1/4 order-3 lg:order-3">
@@ -163,7 +178,12 @@ export function UsdaSection() {
               <p className="text-lg text-white/80 tracking-widest font-[family-name:var(--font-geist-mono)] mb-2">
                 Holders
               </p>
-              <p className="text-3xl font-bold">{holders.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
+              <p className="text-3xl font-bold">
+                {holders.toLocaleString("en-US", {
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
+                })}
+              </p>
             </div>
           </div>
         </div>
@@ -181,7 +201,7 @@ export function UsdaSection() {
               href="https://www.zestprotocol.com/"
               className="ring-1 ring-inset bg-gradient-to-br from-gray-100/70 to-gray-200/80 ring-black/[0.16] rounded-xl lg:rounded-tl-4xl shadow hover:bg-gradient-to-tr hover:scale-[1.015] transition ease-in"
             >
-              <div className="py-12 px-10 text-slate-800 text-2xl">
+              <div className="py-8 px-6 sm:py-12 sm:px-10 text-slate-800 text-2xl">
                 <div className="flex items-center gap-x-2">
                   <svg
                     className="w-8 h-8 shrink-0"
@@ -217,7 +237,7 @@ export function UsdaSection() {
               href="https://www.bitflow.finance/"
               className="ring-1 ring-inset bg-gradient-to-br from-gray-100/70 to-gray-200/80 ring-black/[0.16] rounded-xl shadow hover:bg-gradient-to-tr hover:scale-[1.015] transition ease-in lg:rounded-tr-4xl"
             >
-              <div className="py-12 px-10 text-slate-800 text-2xl">
+              <div className="py-8 px-6 sm:py-12 sm:px-10 text-slate-800 text-2xl">
                 <div className="flex items-center gap-x-2">
                   <svg
                     className="w-8 h-8 shrink-0"
@@ -248,7 +268,7 @@ export function UsdaSection() {
               href="https://alexlab.co/"
               className="ring-1 ring-inset bg-gradient-to-tr from-gray-100/70 to-gray-200/80 ring-black/[0.16] rounded-xl lg:rounded-bl-4xl shadow hover:bg-gradient-to-tr hover:scale-[1.015] transition ease-in"
             >
-              <div className="py-12 px-10 text-slate-800 text-2xl">
+              <div className="py-8 px-6 sm:py-12 sm:px-10 text-slate-800 text-2xl">
                 <div className="flex items-center gap-x-2">
                   <svg
                     className="w-8 h-8 shrink-0"
@@ -281,7 +301,7 @@ export function UsdaSection() {
               href="https://app.arkadiko.finance/"
               className="ring-1 ring-inset bg-gradient-to-tl from-gray-100/70 to-gray-200/80 ring-black/[0.16] rounded-xl lg:rounded-br-4xl shadow hover:bg-gradient-to-tr hover:scale-[1.015] transition ease-in"
             >
-              <div className="py-12 px-10 text-slate-800 text-2xl">
+              <div className="py-8 px-6 sm:py-12 sm:px-10 text-slate-800 text-2xl">
                 <div className="flex items-center gap-x-2">
                   <svg
                     className="w-8 h-8 shrink-0"
