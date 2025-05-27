@@ -100,7 +100,7 @@ function Hero() {
               </Button>
               <p className="text-xs text-center mt-1 text-gray-950/75">
                 By launching the app, you{" "}
-                <a className="underline" href="#">
+                <a className="underline" href="/arkadiko-EULA.pdf" target="_blank">
                   agree to the EULA
                 </a>
               </p>
