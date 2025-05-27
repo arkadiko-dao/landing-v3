@@ -6,15 +6,21 @@ import External from "@/components/external";
 
 export function UsdaSection() {
   const [tvl, setTvl] = useState<number>(0.0);
-  const [marketCap, setMarketCap] = useState<number>(0.0);
+  const [supply, setSupply] = useState<number>(0.0);
+  const [holders, setHolders] = useState<number>(0.0);
 
   useEffect(() => {
-    fetch('/api/supply')
-      .then(res => res.json())
-      .then(data => {
-        setMarketCap(data['amount']);
-        setTvl(5389385); // TODO: make dynamic
-      });
+    async function getHolders() {
+      const res = await fetch('https://api.mainnet.hiro.so/extended/v1/tokens/ft/SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.usda-token::usda/holders', { method: 'GET' });
+      const data = await res.json();
+
+      console.log(data);
+      setSupply(data['total_supply'] / 1_000_000);
+      setTvl(5389385); // TODO: make dynamic
+      setHolders(data['total']);
+    }
+
+    getHolders();
   }, []);
 
   return (
@@ -147,9 +153,9 @@ export function UsdaSection() {
           <div className="w-full sm:max-w-1/4 order-1 lg:order-2">
             <div className="rounded-3xl bg-gradient-to-tr from-violet-950 to-violet-800 text-white py-8 px-12 ring-1 ring-violet-950/[0.08] ring-inset backdrop-blur hover:ring-violet-950/[0.13]">
               <p className="text-2xl text-white/80 tracking-widest font-[family-name:var(--font-geist-mono)] mb-4">
-                Market cap
+                Circulating USDA
               </p>
-              <p className="text-5xl font-bold">${marketCap.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
+              <p className="text-5xl font-bold">${supply.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
             </div>
           </div>
           <div className="w-full sm:max-w-1/4 order-3 lg:order-3">
@@ -157,7 +163,7 @@ export function UsdaSection() {
               <p className="text-lg text-white/80 tracking-widest font-[family-name:var(--font-geist-mono)] mb-2">
                 Holders
               </p>
-              <p className="text-3xl font-bold">7,435</p>
+              <p className="text-3xl font-bold">{holders.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
             </div>
           </div>
         </div>
