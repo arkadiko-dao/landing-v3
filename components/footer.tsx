@@ -61,7 +61,7 @@ function Sitemap() {
           <SitemapLink href="https://info.arkadiko.finance">
             Analytics
           </SitemapLink>
-          <SitemapLink href="https://github.com/arkadiko-dao/arkadiko/blob/master/SECURITY.md">
+          <SitemapLink href="https://immunefi.com/bug-bounty/arkadiko/information/">
             Bug Bounty
           </SitemapLink>
         </SitemapLinks>
@@ -69,9 +69,8 @@ function Sitemap() {
       <div>
         <SitemapHeading>Company</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/brand">Brand</SitemapLink>
-          <SitemapLink href="/press-review">Press Review</SitemapLink>
-          <SitemapLink href="/roadmap">Roadmap</SitemapLink>
+          <SitemapLink href="https://usda.arkadiko.finance/brand">Brand</SitemapLink>
+          <SitemapLink href="https://usda.arkadiko.finance/press-review/">Press Review</SitemapLink>
           <SitemapLink href="arkadiko-EULA.pdf">EULA</SitemapLink>
         </SitemapLinks>
       </div>
