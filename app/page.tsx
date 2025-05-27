@@ -16,7 +16,6 @@ import type { Metadata } from "next";
 import { Pile } from "@/components/pile";
 import { Footer } from "@/components/footer";
 import { GiftIcon, ScaleIcon } from "@heroicons/react/24/solid";
-import External from "@/components/external";
 
 export const metadata: Metadata = {
   description:

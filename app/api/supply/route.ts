@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { callReadOnlyFunction, cvToJSON } from '@stacks/transactions';
 
-export async function GET(request: Request) {
+export async function GET() {
   const contractAddress = "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR";
   const usdaSupplyCall = await callReadOnlyFunction({
     contractAddress,

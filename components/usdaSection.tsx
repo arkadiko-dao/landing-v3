@@ -12,8 +12,8 @@ export function UsdaSection() {
     fetch('/api/supply')
       .then(res => res.json())
       .then(data => {
-        console.log('read-only result', data);
         setMarketCap(data['amount']);
+        setTvl(5389385); // TODO: make dynamic
       });
   }, []);
 
@@ -141,7 +141,7 @@ export function UsdaSection() {
               <p className="text-lg text-white/80 tracking-widest font-[family-name:var(--font-geist-mono)] mb-2">
                 TVL
               </p>
-              <p className="text-3xl font-bold">$5,469,816</p>
+              <p className="text-3xl font-bold">${tvl.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
             </div>
           </div>
           <div className="w-full sm:max-w-1/4 order-1 lg:order-2">
